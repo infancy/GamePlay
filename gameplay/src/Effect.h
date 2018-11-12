@@ -23,6 +23,7 @@ class Uniform;
  * typical effect systems support, such as GPU render state management,
  * techniques and passes.
  */
+// 在一个 shaders program 的基础上增加了“语义”
 class Effect: public Ref
 {
 public:

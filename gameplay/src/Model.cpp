@@ -371,7 +371,19 @@ unsigned int Model::draw(bool wireframe)
                 {
                     Pass* pass = technique->getPassByIndex(j);
                     GP_ASSERT(pass);
-                    pass->bind();
+                    pass->bind();/*
+                    // Bind our effect.
+                    _effect->bind();
+
+                    // Bind our render state
+                    RenderState::bind(this);
+
+                    // If we have a vertex attribute binding, bind it
+                    if (_vaBinding)
+                    {
+                        _vaBinding->bind();
+                    }
+                    */
                     GL_ASSERT( glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, part->_indexBuffer) );
                     if (!wireframe || !drawWireframe(part))
                     {

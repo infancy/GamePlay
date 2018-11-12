@@ -10,6 +10,7 @@ namespace gameplay
  * Defines a part of a mesh describing the way the
  * mesh's vertices are connected together.
  */
+// 实际指的是 index buffer object 那部分？？？
 class MeshPart
 {
     friend class Mesh;
